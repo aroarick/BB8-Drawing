@@ -1,0 +1,23 @@
+{
+  "name": "bb8-drawing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aroarick/BB8-Drawing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aroarick/BB8-Drawing/issues"
+  },
+  "homepage": "https://github.com/aroarick/BB8-Drawing#readme",
+  "dependencies": {
+    "jade": "^1.11.0",
+    "pug": "^2.0.4"
+  }
+}
