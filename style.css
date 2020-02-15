@@ -26,10 +26,9 @@ body {
 .bb8 {
   width: 220px;
   height: 220px;
-  background: #ebf2fa;
   position: absolute;
   top: 222px;
-  left: 260px; }
+  left: 180px; }
 
 .bb8-body {
   width: 220px;
@@ -38,7 +37,8 @@ body {
   position: absolute;
   border-radius: 50%;
   border: solid 8px #244356;
-  overflow: hidden; }
+  overflow: hidden;
+  animation: spin 1s linear infinite; }
 
 .circle {
   width: 120px;
@@ -122,10 +122,10 @@ body {
 .bb8-head {
   width: 160px;
   height: 160px;
-  background: rgba(255, 192, 203, 0.5);
   position: absolute;
-  top: -70px;
-  left: -30px; }
+  top: -60px;
+  left: -30px;
+  transform: rotate(-30deg); }
 
 .head-top {
   width: 160px;
@@ -133,7 +133,8 @@ body {
   background: #ebf2fa;
   border: solid 8px #244356;
   position: absolute;
-  border-radius: 50%; }
+  border-radius: 50%;
+  box-shadow: -10px 0px 0px 5px rgba(0, 0, 0, 0.2) inset; }
 
 .lens {
   width: 56px;
@@ -144,14 +145,40 @@ body {
   position: absolute;
   top: 20px;
   left: 50%;
-  margin-left: -28px; }
-  .lens:before {
+  margin-left: -28px;
+  overflow: hidden; }
+  .lens:before, .lens:after {
     content: "";
     display: block;
     width: 6px;
     height: 70px;
-    background: #295a6d;
-    position: absolute; }
+    background: #2a6b80;
+    position: absolute;
+    left: 10px;
+    top: -20px;
+    transform: rotate(40deg); }
+  .lens:after {
+    width: 10px;
+    left: 25px;
+    top: -10px; }
+
+.freckle {
+  height: 13px;
+  width: 13px;
+  border-radius: 50%;
+  background: #244356;
+  top: 60px;
+  left: 120px;
+  position: absolute; }
+
+.head-shadow {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
+  left: -20px;
+  top: 0px; }
 
 .head-top-crop {
   height: 50%;
@@ -169,8 +196,6 @@ body {
   border-bottom: 8px solid #244356;
   background: #a7d0e0;
   height: 20px;
-  width: 100%;
-  border-radius: 0px 0px 8px 8px;
   position: absolute; }
 
 .head-bottom-base {
@@ -181,7 +206,6 @@ body {
   width: 30px;
   transform: rotate(40deg);
   transform-origin: bottom left;
-  position: absolute;
   top: -16px;
   left: -3;
   border-radius: 0px 0px 8px 8px; }
@@ -190,6 +214,178 @@ body {
   width: 30px;
   transform: rotate(-40deg);
   transform-origin: bottom right;
-  position: absolute;
   top: -16px;
-  right: -3px; }
+  right: -3px;
+  border-radius: 0px 0px 8px 8px; }
+
+.speedlines > div {
+  height: 8px;
+  width: 55px;
+  background: #244356;
+  border-radius: 8px;
+  position: absolute;
+  left: 120px; }
+  .speedlines > div.tail:after {
+    content: "";
+    display: block;
+    height: 8px;
+    width: 20px;
+    border-radius: 8px;
+    background: #244356;
+    position: absolute;
+    left: 100%;
+    margin-left: 5px; }
+  .speedlines > div.one {
+    top: -60px;
+    left: 53px; }
+  .speedlines > div.two {
+    top: -21px;
+    left: 113px; }
+  .speedlines > div.three {
+    top: -10px;
+    left: 103px;
+    width: 30px; }
+  .speedlines > div.four {
+    top: 121px;
+    left: 203px;
+    width: 30px; }
+  .speedlines > div.five {
+    top: 141px;
+    left: 218px;
+    width: 50px; }
+
+.sparkles > div {
+  width: 30px;
+  height: 30px;
+  position: absolute; }
+  .sparkles > div:before, .sparkles > div:after {
+    content: "";
+    display: block;
+    width: 40%;
+    height: 100%;
+    border-radius: 20px;
+    background: #ff7761;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .sparkles > div:after {
+    transform: translate(-50%, -50%) rotate(90deg); }
+  .sparkles > div.blue:before, .sparkles > div.blue:after {
+    background: #449baa; }
+  .sparkles > div.orange:before, .sparkles > div.orange:after {
+    background: #fdc23e; }
+  .sparkles > div.med {
+    transform: scale(0.6); }
+  .sparkles > div.small {
+    transform: scale(0.4); }
+  .sparkles > div.one {
+    top: -53px;
+    left: 140px; }
+  .sparkles > div.two {
+    top: -46px;
+    left: 210px; }
+  .sparkles > div.three {
+    top: -6px;
+    left: 186px; }
+  .sparkles > div.four {
+    top: -16px;
+    left: 280px; }
+  .sparkles > div.five {
+    top: 44px;
+    left: 230px; }
+  .sparkles > div.six {
+    top: 94px;
+    left: 240px; }
+  .sparkles > div.seven {
+    top: 154px;
+    left: 216px; }
+  .sparkles > div.eight {
+    top: 187px;
+    left: 185px; }
+  .sparkles > div.nine {
+    top: 63px;
+    left: 325px; }
+  .sparkles > div.ten {
+    top: 124px;
+    left: 315px; }
+  .sparkles > div.eleven {
+    top: 161px;
+    left: 294px; }
+  .sparkles > div.twelve {
+    top: 27px;
+    left: 366px; }
+  .sparkles > div.thirteen {
+    top: 37px;
+    left: 415px; }
+  .sparkles > div.fourteen {
+    top: 87px;
+    left: 385px; }
+  .sparkles > div.fifteen {
+    top: 137px;
+    left: 378px; }
+  .sparkles > div.sixteen {
+    top: 97px;
+    left: 455px; }
+
+.ground > div {
+  height: 8px;
+  width: 80px;
+  background: #244356;
+  position: absolute;
+  top: 212px;
+  left: -90px;
+  border-radius: 8px; }
+  .ground > div.one .bump {
+    left: 40px; }
+  .ground > div.two {
+    width: 25px;
+    left: -1px; }
+  .ground > div.three {
+    width: 300px;
+    left: 34px; }
+  .ground > div.four {
+    width: 90px;
+    left: 346px; }
+    .ground > div.four .bump {
+      left: 10px; }
+  .ground > div.five {
+    width: 20px;
+    left: 450px; }
+  .ground > div.six {
+    width: 80px;
+    left: 11px;
+    top: 255px; }
+  .ground > div.seven {
+    width: 127px;
+    left: 171px;
+    top: 255px; }
+    .ground > div.seven .bump {
+      left: 60px; }
+  .ground > div.eight {
+    width: 87px;
+    left: 71px;
+    top: 295px; }
+    .ground > div.eight .bump {
+      left: 30px; }
+  .ground > div .bump {
+    height: 15px;
+    width: 30px;
+    position: absolute;
+    top: -7px;
+    overflow: hidden; }
+    .ground > div .bump:after {
+      content: "";
+      display: block;
+      height: 30px;
+      width: 30px;
+      border: 8px solid #244356;
+      border-radius: 50%;
+      background: #eee;
+      box-sizing: border-box; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(360deg); }
+  100% {
+    transform: rotate(0deg); } }
