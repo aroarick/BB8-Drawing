@@ -27,6 +27,7 @@ body {
   position: relative;
 }
 
+// BB8
 .bb8 {
   width: 220px;
   height: 220px;
@@ -34,10 +35,9 @@ body {
   position: absolute;
   top: 222px;
   left: 260px;
-  border-radius: 50%;
-  background: fade-out(pink, 0.7);
 }
 
+// Body
 .bb8-body {
   width: 220px;
   height: 220px;
@@ -48,6 +48,7 @@ body {
   overflow: hidden;
 }
 
+// Circle
 .circle {
   width: 120px;
   height: 120px;
@@ -66,8 +67,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 40%;
-    width: 40%;
+    height: 35%;
+    width: 35%;
   }
 }
 
@@ -77,10 +78,8 @@ body {
 }
 
 .circle-2 {
-  top: 117px;
-  left: 70px;
-  height: 140px;
-  width: 140px;
+  top: 123px;
+  left: 80px;
 }
 
 .circle-3 {
@@ -88,4 +87,148 @@ body {
   width: 300px;
   left: 120px;
   top: -180px;
+}
+
+// Dot
+.dot {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  background: #244356;
+  position: absolute;
+}
+
+.dot-1 {
+  top: 75px;
+  left: 113px;
+}
+
+.dot-2 {
+  top: 145px;
+  left: 40px;
+}
+
+// Line
+.line {
+  position: absolute;
+  height: 8px;
+  width: 100px;
+  background: #244356;
+}
+
+.line-1 {
+  transform: rotate(40deg);
+  top: 40px;
+  left: -70px;
+}
+
+.line-2 {
+  transform: rotate(160deg);
+  top: -45px;
+  left: -60px;
+}
+
+.line-3 {
+  transform: rotate(-60deg);
+  top: 25px;
+  left: 10px;
+}
+
+// Shadow
+.body-shadow {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  position: absolute;
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.3);
+  left: -50px;
+  top: -20px;
+}
+
+// Head
+.bb8-head {
+  width: 160px;
+  height: 160px;
+  background: fade-out(pink, 0.5);
+  position: absolute;
+  top: -70px;
+  left: -30px;
+}
+
+.head-top {
+  width: 160px;
+  height: 160px;
+  background: #ebf2fa;
+  border: solid 8px #244356;
+  position: absolute;
+  border-radius: 50%;
+}
+
+// Lens
+.lens {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: solid 8px #244356;
+  background: #295a6d;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  margin-left: -28px;
+
+  &:before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 70px;
+    background: #295a6d;
+    position: absolute;
+  }
+}
+
+.head-top-crop {
+  height: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.head-bottom {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+}
+
+.head-bottom-base,
+.head-side-1,
+.head-side-2 {
+  border-bottom: 8px solid #244356;
+  background: #a7d0e0;
+  height: 20px;
+  width: 100%;
+  border-radius: 0px 0px 8px 8px;
+  position: absolute;
+}
+
+.head-bottom-base {
+  width: 78%;
+  left: 11%;
+}
+
+.head-side-1 {
+  width: 30px;
+  transform: rotate(40deg);
+  transform-origin: bottom left;
+  position: absolute;
+  top: -16px;
+  left: -3;
+  border-radius: 0px 0px 8px 8px;
+}
+
+.head-side-2 {
+  width: 30px;
+  transform: rotate(-40deg);
+  transform-origin: bottom right;
+  position: absolute;
+  top: -16px;
+  right: -3px;
 }
