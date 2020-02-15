@@ -255,7 +255,7 @@ body {
 
 .head-side-1 {
   width: 30px;
-  transform: rotate(40deg);
+  transform: rotate(45deg);
   transform-origin: bottom left;
   top: -16px;
   left: -3;
@@ -531,13 +531,13 @@ body {
     position: absolute;
     top: -7px;
     overflow: hidden;
-    animation: move 1s linear infinite;
+    animation: move 0.5s linear infinite;
 
     &.move-1 {
-      animation: move 1s 300ms linear infinite;
+      animation: move 0.5s 350ms linear infinite;
     }
     &.move-2 {
-      animation: move 1s 300ms linear infinite;
+      animation: move 0.5s 700ms linear infinite;
     }
 
     &:after {
