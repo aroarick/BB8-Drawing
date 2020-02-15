@@ -135,12 +135,21 @@ body {
 }
 
 // Shadow
+.body-shadow-crop {
+  // width: 220px;
+  // height: 220px;
+  // position: absolute;
+  // border-radius: 50%;
+  // border: solid 8px #244356;
+  // overflow: hidden;
+}
+
 .body-shadow {
   width: 220px;
   height: 220px;
   border-radius: 50%;
   position: absolute;
-  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
   left: -50px;
   top: -20px;
 }
@@ -433,6 +442,22 @@ body {
     top: 97px;
     left: 455px;
   }
+
+  &.pulse {
+    animation: pulse 1s linear infinite;
+  }
+
+  &.pulse-1 {
+    animation: pulse 1s 300ms linear infinite;
+  }
+
+  &.pulse-2 {
+    animation: pulse 1s 600ms linear infinite;
+  }
+
+  &.pulse-3 {
+    animation: pulse 1s 900ms linear infinite;
+  }
 }
 
 // Ground
@@ -506,6 +531,14 @@ body {
     position: absolute;
     top: -7px;
     overflow: hidden;
+    animation: move 1s linear infinite;
+
+    &.move-1 {
+      animation: move 1s 300ms linear infinite;
+    }
+    &.move-2 {
+      animation: move 1s 300ms linear infinite;
+    }
 
     &:after {
       content: "";
@@ -520,11 +553,47 @@ body {
   }
 }
 
+// Animation
+// Body Spin
 @keyframes spin {
   0% {
     transform: rotate(360deg);
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+// Star Pulse
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(0.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// Ground Move
+@keyframes move {
+  0% {
+    left: 5%;
+    transform: scale(0);
+  }
+
+  10% {
+    transform: scale(1);
+  }
+
+  85% {
+    transform: scale(1);
+  }
+
+  100% {
+    left: 55%;
+    transform: scale(0);
   }
 }

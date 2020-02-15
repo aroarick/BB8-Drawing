@@ -115,7 +115,7 @@ body {
   height: 220px;
   border-radius: 50%;
   position: absolute;
-  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.4);
   left: -50px;
   top: -20px; }
 
@@ -327,6 +327,14 @@ body {
   .sparkles > div.sixteen {
     top: 97px;
     left: 455px; }
+  .sparkles > div.pulse {
+    animation: pulse 1s linear infinite; }
+  .sparkles > div.pulse-1 {
+    animation: pulse 1s 300ms linear infinite; }
+  .sparkles > div.pulse-2 {
+    animation: pulse 1s 600ms linear infinite; }
+  .sparkles > div.pulse-3 {
+    animation: pulse 1s 900ms linear infinite; }
 
 .ground > div {
   height: 8px;
@@ -373,7 +381,12 @@ body {
     width: 30px;
     position: absolute;
     top: -7px;
-    overflow: hidden; }
+    overflow: hidden;
+    animation: move 1s linear infinite; }
+    .ground > div .bump.move-1 {
+      animation: move 1s 300ms linear infinite; }
+    .ground > div .bump.move-2 {
+      animation: move 1s 300ms linear infinite; }
     .ground > div .bump:after {
       content: "";
       display: block;
@@ -389,3 +402,23 @@ body {
     transform: rotate(360deg); }
   100% {
     transform: rotate(0deg); } }
+
+@keyframes pulse {
+  0% {
+    transform: scale(1); }
+  90% {
+    transform: scale(0.3); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes move {
+  0% {
+    left: 5%;
+    transform: scale(0); }
+  10% {
+    transform: scale(1); }
+  85% {
+    transform: scale(1); }
+  100% {
+    left: 55%;
+    transform: scale(0); } }
