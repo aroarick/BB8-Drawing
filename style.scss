@@ -2,11 +2,19 @@
 background: #eee
 base: #ebf2fa
 base-tint: #a7d0e0
-stroke: #244356
+stroke: $stroke
 orange: #fdc23e
 blue: #449baa
 red: #ff7761
 */
+
+$background: #eee;
+$base: #ebf2fa;
+$base-tint: #4800ff;
+$stroke: #3500b8;
+$orange: #ff8a19;
+$dark-green: #09b31b;
+$light-green: #14cc28;
 
 * {
   box-sizing: border-box;
@@ -43,7 +51,7 @@ body {
   background: #ebf2fa;
   position: absolute;
   border-radius: 50%;
-  border: solid 8px #244356;
+  border: solid 8px $stroke;
   overflow: hidden;
   animation: spin 1s linear infinite;
 }
@@ -52,15 +60,15 @@ body {
 .circle {
   width: 120px;
   height: 120px;
-  border: 8px solid #244356;
-  background-color: #fdc23e;
+  border: 8px solid $stroke;
+  background-color: $orange;
   border-radius: 50%;
   position: absolute;
 
   &:after {
     content: "";
     display: block;
-    border: 8px solid #244356;
+    border: 8px solid $stroke;
     background: #ebf2fa;
     border-radius: 50%;
     position: absolute;
@@ -94,7 +102,7 @@ body {
   height: 18px;
   width: 18px;
   border-radius: 50%;
-  background: #244356;
+  background: $stroke;
   position: absolute;
 }
 
@@ -113,7 +121,7 @@ body {
   position: absolute;
   height: 8px;
   width: 100px;
-  background: #244356;
+  background: $stroke;
 }
 
 .line-1 {
@@ -168,7 +176,7 @@ body {
   width: 160px;
   height: 160px;
   background: #ebf2fa;
-  border: solid 8px #244356;
+  border: solid 8px $stroke;
   position: absolute;
   border-radius: 50%;
   box-shadow: -10px 0px 0px 5px rgba(0, 0, 0, 0.2) inset;
@@ -179,8 +187,8 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  border: solid 8px #244356;
-  background: #295a6d;
+  border: solid 8px $stroke;
+  background: $dark-green;
   position: absolute;
   top: 20px;
   left: 50%;
@@ -193,7 +201,7 @@ body {
     display: block;
     width: 6px;
     height: 70px;
-    background: #2a6b80;
+    background: $light-green;
     position: absolute;
     left: 10px;
     top: -20px;
@@ -211,7 +219,7 @@ body {
   height: 13px;
   width: 13px;
   border-radius: 50%;
-  background: #244356;
+  background: $stroke;
   top: 60px;
   left: 120px;
   position: absolute;
@@ -242,8 +250,8 @@ body {
 .head-bottom-base,
 .head-side-1,
 .head-side-2 {
-  border-bottom: 8px solid #244356;
-  background: #a7d0e0;
+  border-bottom: 8px solid $stroke;
+  background: $base-tint;
   height: 20px;
   position: absolute;
 }
@@ -275,7 +283,7 @@ body {
 .speedlines > div {
   height: 8px;
   width: 55px;
-  background: #244356;
+  background: $stroke;
   border-radius: 8px;
   position: absolute;
   left: 120px;
@@ -286,7 +294,7 @@ body {
     height: 8px;
     width: 20px;
     border-radius: 8px;
-    background: #244356;
+    background: $stroke;
     position: absolute;
     left: 100%;
     margin-left: 5px;
@@ -334,7 +342,7 @@ body {
     width: 40%;
     height: 100%;
     border-radius: 20px;
-    background: #ff7761;
+    background: $dark-green;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -347,12 +355,12 @@ body {
 
   &.blue:before,
   &.blue:after {
-    background: #449baa;
+    background: $stroke;
   }
 
   &.orange:before,
   &.orange:after {
-    background: #fdc23e;
+    background: $orange;
   }
 
   &.med {
@@ -464,7 +472,7 @@ body {
 .ground > div {
   height: 8px;
   width: 80px;
-  background: #244356;
+  background: $stroke;
   position: absolute;
   top: 212px;
   left: -90px;
@@ -545,7 +553,7 @@ body {
       display: block;
       height: 30px;
       width: 30px;
-      border: 8px solid #244356;
+      border: 8px solid $stroke;
       border-radius: 50%;
       background: #eee;
       box-sizing: border-box;
